@@ -6,9 +6,8 @@
   <span class="with-love">
        <i class="fa fa-{{ theme.footer.icon }}"></i>
   </span>
-  <!--
     <span class="author" itemprop="copyrightHolder"> &nbsp;{{ theme.footer.copyright || config.author }}</span>
-  -->
+
   {% if theme.post_wordcount.totalcount %}
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
@@ -50,7 +49,9 @@
 
 {% if not theme.post_wordcount.totalcount %}
   <div class="theme-info2">
-    <span class="post-count"> <i class="fa fa-area-chart"></i>&nbsp;{{ totalcount(site) }} &nbsp;|&nbsp; Since 8/7 七夕</span>
+  <!--
+    <span class="post-count"> <i class="fa fa-area-chart"></i>&nbsp;{{ totalcount(site) }} &nbsp;|&nbsp; 独角博客</span>
+   -->
   </div>
 {% endif %}
 

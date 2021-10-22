@@ -35,7 +35,7 @@ favicon:
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "KekeMao,独角博客"
+keywords: "kekemao,独角博客,独角,kekemao00,Android"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -52,25 +52,25 @@ footer:
   icon: heart #底部心形图案
 
   # If not defined, will be used `author` from Hexo main config.
-  copyright:
+  copyright: 独角博客
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
-  powered: true
+  powered: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
 
   # 网站底部运行时间
   runtime:
-    enable: true
+    enable: false
     birthday: "08/07/2019 20:00:00"
     color: "#1890ff"
   # 网站底部uv pv
   diy_visit:
-    enable: true
+    enable: false
 
   # -------------------------------------------------------------
   # Any custom text can be defined here.
@@ -83,7 +83,7 @@ footer:
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
 # Tips: Before you open this tag, remember set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
-canonical: true
+canonical: false
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
 seo: true # description的描述会不显示
