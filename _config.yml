@@ -157,10 +157,10 @@ scheme: Pisces
 social:
   GitHub: https://github.com/kekemao00 || github
   E-Mail: mailto:kekemao00@gmail.com || envelope
-  Facebook: https://www.facebook.com/kekemao00 || facebook
-  Witter: https://twitter.com/kekemao00 || twitter
-  YouTube: https://youtube.com/channel/UCtzIJK9eLCWLQF13KpZE-0w  || youtube
-  Jianshu: https://www.jianshu.com/u/3b74c7b81348 || instagram
+  #Facebook: https://www.facebook.com/kekemao00 || facebook
+  #Witter: https://twitter.com/kekemao00 || twitter
+  #YouTube: https://youtube.com/channel/UCtzIJK9eLCWLQF13KpZE-0w  || youtube
+  #Jianshu: https://www.jianshu.com/u/3b74c7b81348 || instagram
 
 social_icons:
   enable: true
@@ -509,21 +509,21 @@ needmoreshare2:
 #  站点验证
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-google_site_verification: 
+google_site_verification:
 
 # Google Analytics
-google_analytics: 
+google_analytics:
 
 # https://liaofuzhan.netlify.com 站点验证
-baidu_site_verification: 
+baidu_site_verification:
 
-qihu_site_verification: 
+qihu_site_verification:
 
-sogou_site_verification: 
+sogou_site_verification:
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
-bing_site_verification: 
+bing_site_verification:
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
@@ -580,7 +580,7 @@ vkontakte_api:
 rating:
   enable: false
   id:     #<app_id>
-  color: 
+  color:
 # ---------------------------------------------------------------
 
 # Show number of visitors to each article.
