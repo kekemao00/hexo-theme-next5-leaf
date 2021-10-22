@@ -62,6 +62,16 @@ footer:
     enable: true
     # Version info of NexT after scheme info (vX.X.X).
     version: true
+
+  # 网站底部运行时间
+  runtime:
+    enable: true
+    birthday: "08/07/2019 20:00:00"
+    color: "#1890ff"
+  # 网站底部uv pv
+  diy_visit:
+    enable: true
+
   # -------------------------------------------------------------
   # Any custom text can be defined here.
   #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
@@ -94,16 +104,18 @@ index_with_subtitle: true
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
-  # top: top || signal
+#  top: top || signal
+  archives: /archives/ || archive
   categories: /categories/ || th
   tags: /tags/ || tags
-  archives: /archives/ || archive
-  # xiaohutong: /xiaohutong || map
-  sitemap: /sitemap.xml || sitemap
-  about: /about/ || user
-  # schedule: /schedule/ || calendar
-  # commonweal: /404/ || heartbeat
+  life: /life/ || apple
+#  movies: /movies/ || film
+#  xiaohutong: /xiaohutong || map
+#  sitemap: /sitemap.xml || sitemap
+  #schedule: /schedule/ || calendar
+  #commonweal: /404/ || heartbeat
   links: /links/ || link
+  about: /about/ || user
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -143,16 +155,16 @@ scheme: Pisces
   #Skype: skype:yourname?call|chat || skype
 
 social:
-        # FB Page: https://www.facebook.com/jame.leaf.94
-        # Witter: https://twitter.com/Leafjame || twitter
-  E-Mail: mailto:kekemao00@gmail.com || envelope
   GitHub: https://github.com/kekemao00 || github
-  # YouTube: https://youtube.com/channel/UCtzIJK9eLCWLQF13KpZE-0w  || youtube
-  # Jianshu: https://www.jianshu.com/u/3b74c7b81348 || instagram
+  E-Mail: mailto:kekemao00@gmail.com || envelope
+  Facebook: https://www.facebook.com/kekemao00 || facebook
+  Witter: https://twitter.com/kekemao00 || twitter
+  YouTube: https://youtube.com/channel/UCtzIJK9eLCWLQF13KpZE-0w  || youtube
+  Jianshu: https://www.jianshu.com/u/3b74c7b81348 || instagram
 
 social_icons:
-  enable: false
-  icons_only: false
+  enable: true
+  icons_only: true
   transition: false
 
 # Blog rolls
@@ -232,7 +244,7 @@ sidebar:
 scroll_to_more: false
 
 # Automatically saving scroll position on each post/page in cookies.
-save_scroll: true
+save_scroll: false
 
 # Automatically excerpt description in homepage as preamble text.
 excerpt_description: true
@@ -245,7 +257,7 @@ auto_excerpt:
 
 # Post meta display settings
 post_meta:
-  item_text: true
+  item_text: false #隐藏文章标题下方'发表于'..文字
   created_at: true
   updated_at: false
   categories: true
@@ -271,7 +283,7 @@ post_wordcount:
 #alipay: /images/alipay.png
 #bitcoin: /images/bitcoin.png
 
-reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+reward_comment: 坚持原创技术分享，感谢您的支持和鼓励！
 wechatpay: /images/wechatpay.jpeg
 alipay: /images/alipay.png
 
@@ -287,7 +299,7 @@ post_copyright:
 # ---------------------------------------------------------------
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: false #开启会影起文章边框消失
 
 # Android Chrome header panel color ($black-deep).
 android_chrome_color: "#222"
@@ -427,9 +439,6 @@ valine:
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 #livere_uid: your uid
 
-# 来必力评论 https://www.livere.com/insight/communite
-livere_uid: #
-
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
 # You can get your Github ID from https://api.github.com/users/<Github username>
@@ -447,14 +456,6 @@ gitment:
   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
   redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled
 
-gitalk:
-  enable: false
-  githubID:
-  repo:
-  ClientID:
-  ClientSecret:
-  adminUser:
-  distractionFreeMode: true
 
 # Baidu Share
 # Available value:
@@ -496,25 +497,33 @@ needmoreshare2:
       iconStyle: box
       boxForm: horizontal
       position: bottomCenter
-      networks: Wechat,Douban,QQZone,Twitter,Facebook
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
   float:
     enable: false
     options:
       iconStyle: box
       boxForm: horizontal
       position: middleRight
-      networks: Wechat,Douban,QQZone,Twitter,Facebook
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
 
+#  站点验证
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-#google_site_verification:
+google_site_verification: 
 
 # Google Analytics
-#google_analytics:
+google_analytics: 
+
+# https://liaofuzhan.netlify.com 站点验证
+baidu_site_verification: 
+
+qihu_site_verification: 
+
+sogou_site_verification: 
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
-#bing_site_verification:
+bing_site_verification: 
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
@@ -531,7 +540,7 @@ needmoreshare2:
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
-  ua_enable: false
+  ua_enable: true
   admin_enable: false
   user_id: 0
   #admin_nickname: Author
@@ -570,13 +579,13 @@ vkontakte_api:
 # To get your ID visit https://widgetpack.com
 rating:
   enable: false
-#  id:     #<app_id>
-  id:
-  color:
+  id:     #<app_id>
+  color: 
 # ---------------------------------------------------------------
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
+# 安全问题：https://leaferx.online/2018/02/11/lc-security/
 leancloud_visitors:
   enable: true
   app_id:  LTH0ylU1dpzdyXSNtfftVbbl-MdYXbMMI
@@ -607,14 +616,16 @@ busuanzi_count:
   enable: true
   # custom uv span for the whole site
   site_uv: true
-  site_uv_header: <i class="fa fa-user"></i>访问人数
-  site_uv_footer: 人次
+#  site_uv_header: <i class="fa fa-user"></i> 访客
+  site_uv_header: <i class="fa fa-user"></i>
+  site_uv_footer:
   # custom pv span for the whole site
   site_pv: true
-  site_pv_header: <i class="fa fa-eye"></i>总访问量
-  site_pv_footer: 次
+#  site_pv_header: <i class="fa fa-eye"></i> 访问量
+  site_pv_header: <i class="fa fa-eye"></i>
+  site_pv_footer:
   # custom pv span for one page only
-  page_pv: true #使用firestore统计pv及排行
+  page_pv: false #使用leancloud(firestore)统计pv及排行
   page_pv_header: <i class="fa fa-file-o"></i> 浏览
   page_pv_footer: 次
 
@@ -710,7 +721,7 @@ tabs:
 # Use velocity to animate everything.
 motion:
   enable: true
-  async: false
+  async: true
   transition:
     # Transition variants:
     # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut
@@ -719,12 +730,12 @@ motion:
     # slideUpIn | slideUpOut | slideDownIn | slideDownOut | slideLeftIn | slideLeftOut | slideRightIn | slideRightOut
     # slideUpBigIn | slideUpBigOut | slideDownBigIn | slideDownBigOut | slideLeftBigIn | slideLeftBigOut | slideRightBigIn | slideRightBigOut
     # perspectiveUpIn | perspectiveUpOut | perspectiveDownIn | perspectiveDownOut | perspectiveLeftIn | perspectiveLeftOut | perspectiveRightIn | perspectiveRightOut
-    post_block: fadeIn
-    post_header: slideDownIn
-    post_body: slideDownIn
-    coll_header: slideLeftIn
+    post_block: flipYIn
+    post_header: perspectiveRightIn
+    post_body: perspectiveLeftIn
+    coll_header: swoopIn
     # Only for Pisces | Gemini.
-    sidebar: slideUpIn
+    sidebar: shrinkIn
 
 # Fancybox
 fancybox: true
@@ -770,8 +781,8 @@ canvas_sphere: false
 # 条状背景线，点击动态变化
 canvas_ribbon:
   enable: true
-  size: 300
-  alpha: 0.6
+  size: 60
+  alpha: 0.1
   zIndex: -1
 
 # 设置CDN加速：http://yearito.cn/posts/hexo-deploy-to-VPS.html
@@ -790,8 +801,11 @@ vendors:
 
   # Internal version: 2.1.5
   # See: http://fancyapps.com/fancybox/
-  fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js
-  fancybox_css: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css
+#  图片左右切换按钮
+#  fancybox: #https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js
+#  fancybox_css: #https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css
+  fancybox:
+  fancybox_css:
 
   # Internal version: 1.0.6
   # See: https://github.com/ftlabs/fastclick
@@ -890,19 +904,71 @@ typing_effect:
   colorful: true  # 礼花特效
   shake: false  # 震动特效
 
+# 标签页样式 /tags/
+# type: | tagcanvas | color | love | bubble |
+# PS：tagcanvas依赖hexo-tag-cloud插件
+tagcloud:
+  type: bubble # 为空则使用默认标签页
+
+# 分类页样式
+# type: | love | bubble |
+category_style:
+  type: love # 为空则使用默认标签页
+
+# 侧栏自定义时间
+diy_time:
+  runtime:
+    enable: false #运行时间
+    birthday: "08/07/2018 20:00:00"
+  clock:
+    enable: true # 粒子时钟
+
 # 看板娘
 live2d:
-  enabled: true
+  enable: true
+
+# aplayer音乐播放器
+aplayer:
+  enable: false
+
+# https://player.lmih.cn/
+haoyuePlayer:
+  enable: true
+  key: 158711254641
+
+# 网站右下角旋转魔方
+cube:
+  enable: true
+  type: mini # mini | hollow
+
+# Console 输出第三方个性化字体
+fig_font:
+  enable: true
+  font: Big Money-ne
+  input_text: Welcome To Leaface
+
+# Console 输出自定义字体
+diy_font:
+  enable: true
+  input_text: Welcome To Leaface
+
+# 谷歌广告
+google_ads:
+  enable: false
+  auto_ads: true # next/layout/_layout.swig、 _partials/head.swig、文章内部
+  comments_ads: true # next/layout/_partials/comments.swig
+  sidebar_ads: false # next/layout/_macro/sidebar.swig
+  post_ads: false # next/layout/_macro/post.swig
 
 # Online contact
 daovoice: false
-daovoice_app_id:
+daovoice_app_id: XXXXXXXX
 
 # Tidio online chat
 # see: https://www.tidiochat.com
 tidio:
   enable: false
-  key: # Public_Key
+  key: XXXXXXXX # Public_Key
 
 pdf:
   enable: true
@@ -913,9 +979,56 @@ pdf:
 # see: https://www.hotjar.com/
 hotjar:
   enable: false
-  siteID: # site ID
+  siteID: XXXXXXXX # site ID
 
 # 近期文章
 recent_posts_title: 近期文章
 recent_posts_layout: block
 recent_posts: true
+
+#  https://github.com/overtrue/share.js
+share_js: true
+
+# 网站底部订阅按钮
+web_subscribe:
+  enable: false
+
+# Dependencies: https://github.com/tea3/hexo-related-popular-posts
+related_posts:
+  enable: true
+  title: 相关文章
+  icon: graduation-cap
+  display_in_home: false
+  params:
+    maxCount: 10
+    #PPMixingRate: 0.0
+    #isDate: false
+    #isImage: false
+    #isExcerpt: false
+
+# 主页轮播图 使用 620x310 的图片
+#Home carousel map, from means link, img means picture
+carousel:
+  enable: false
+  item: [
+    {
+      'link': 'https://leaface.netlify.com',
+      'img': 'https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/knowledge.png'
+    },
+    {
+      'link': 'https://www.liaofuzhan.com/posts/507826828.html',
+      'img': 'https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/mobile.png'
+    },
+    {
+      'link': 'https://mailchi.mp/e92415d27722/leaf',
+      'img': 'https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/subscribe.png'
+    },
+    {
+      'link': 'https://github.com/leafjame/hexo-theme-next5-leaf',
+      'img': 'https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/share.png'
+    },
+    {
+      'link': 'https://www.liaofuzhan.com/photos/',
+      'img': 'https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/photos.png'
+    }
+  ]

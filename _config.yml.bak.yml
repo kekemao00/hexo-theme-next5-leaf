@@ -156,10 +156,10 @@ scheme: Pisces
   #Skype: skype:yourname?call|chat || skype
 
 social:
-  GitHub: https://github.com/leafjame || github
-  E-Mail: mailto:leaf793458585@gmail.com || envelope
-  Facebook: https://www.facebook.com/jame.leaf.94 || facebook
-  Witter: https://twitter.com/Leafjame || twitter
+  GitHub: https://github.com/kekemao00 || github
+  E-Mail: mailto:kekemao00@gmail.com || envelope
+  Facebook: https://www.facebook.com/kekemao00 || facebook
+  Witter: https://twitter.com/kekemao00 || twitter
   YouTube: https://youtube.com/channel/UCtzIJK9eLCWLQF13KpZE-0w  || youtube
   Jianshu: https://www.jianshu.com/u/3b74c7b81348 || instagram
 
@@ -191,7 +191,7 @@ mylinks:
 # in site  directory(source/uploads): /uploads/avatar.gif
 #avatar: /images/avatar.gif
 
-avatar: /images/beichen.png
+avatar: /images/kekemao.jpeg
 
 # Table Of Contents in the Sidebar
 toc:
@@ -588,24 +588,26 @@ rating:
 # You can visit https://leancloud.cn get AppID and AppKey.
 # 安全问题：https://leaferx.online/2018/02/11/lc-security/
 leancloud_visitors:
-  enable: false
-  app_id: XXXXXXXX #<app_id>
-  app_key: XXXXXXXX #<app_key>
+  enable: true
+  app_id:  LTH0ylU1dpzdyXSNtfftVbbl-MdYXbMMI
+  app_key: 8M1O1nn75RPr97jsCmyQ3lMu
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
-  # If you don't care about security in leancloud counter and just want to use it directly
-  # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
-  security: false
+  security: true
+  # 由于Leancloud免费版的云引擎存在请求线程数和运行时间限制以及休眠机制，
+  # 很多时候访客数量加载会很慢。
+  # 如果设置betterPerformance为true，
+  # 则网页则会在提交请求之前直接显示访客人数为查询到的人数+1，以增加用户体验。
   betterPerformance: true
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
 # visit https://firebase.google.com/docs/firestore/ to get more information about firestore
 firestore:
-  enable: false
-  collection: XXXXXXXX #required, a string collection name to access firestore database
-  apiKey: XXXXXXXX #required
-  projectId: XXXXXXXX #required
-  bluebird: false #enable this if you want to include bluebird 3.5.1(core version) Promise polyfill
+  enable: true
+  collection: articles #required, a string collection name to access firestore database
+  apiKey: AIzaSyAYCK3u2XY23LlAsXPNo-iJXXf0JA2Gt70 #required
+  projectId: myblog-hexo #required
+  bluebird: true #enable this if you want to include bluebird 3.5.1(core version) Promise polyfill
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
