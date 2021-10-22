@@ -104,7 +104,7 @@
 	  <div class="cube">
 	    <div class="front"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
 	    <div class="back"><a onclick="back2top()" rel="nofollow"> ❤️ </a></div>
-	    <div class="right"><a onclick="back2top()" rel="nofollow"> 北宸小站 </a></div>
+	    <div class="right"><a onclick="back2top()" rel="nofollow"> 独角博客 </a></div>
 	    <div class="left"><a onclick="back2top()" role="button" rel="nofollow"> 请多关照 </a></div>
 	    <div class="top"><a href="https://github.com/leafjame/hexo-theme-next5-leaf" target="_blank" rel="nofollow"> ❤️ </a></div>
 	    <div class="bottom"><a href="https://github.com/leafjame/hexo-theme-next5-leaf" target="_blank" rel="nofollow"> ❤️ </a></div>
