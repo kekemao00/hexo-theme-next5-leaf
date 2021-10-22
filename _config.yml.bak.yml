@@ -35,7 +35,7 @@ favicon:
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "KekeMao,独角博客"
+keywords: "Hexo个人博客,NexT美化优化,哈林摇,Mac Panel特效,Leaf,北宸,Java程序员,北京,旅行,摄像,Github Pages,搭建教程,demo,博客相册,文章排行榜,网站SEO"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -45,23 +45,34 @@ rss:
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  since: 2018 #建站时间
+  since: 2019 #建站时间
 
   # Icon between year and copyright info.
 #  icon: user
-  icon: heart #底部心形图案
+#  icon: heart #底部心形图案
+  icon: heartbeat #底部心形图案
 
   # If not defined, will be used `author` from Hexo main config.
   copyright:
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
-  powered: true
+  powered: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
+
+  # 网站底部运行时间
+  runtime:
+    enable: true
+    birthday: "08/07/2019 20:00:00"
+    color: "#1890ff"
+  # 网站底部uv pv
+  diy_visit:
+    enable: true
+
   # -------------------------------------------------------------
   # Any custom text can be defined here.
   #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
@@ -94,16 +105,18 @@ index_with_subtitle: true
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
-  # top: top || signal
+#  top: top || signal
+  archives: /archives/ || archive
   categories: /categories/ || th
   tags: /tags/ || tags
-  archives: /archives/ || archive
-  # xiaohutong: /xiaohutong || map
-  sitemap: /sitemap.xml || sitemap
-  about: /about/ || user
-  # schedule: /schedule/ || calendar
-  # commonweal: /404/ || heartbeat
+  life: /life/ || apple
+#  movies: /movies/ || film
+#  xiaohutong: /xiaohutong || map
+#  sitemap: /sitemap.xml || sitemap
+  #schedule: /schedule/ || calendar
+  #commonweal: /404/ || heartbeat
   links: /links/ || link
+  about: /about/ || user
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -143,16 +156,16 @@ scheme: Pisces
   #Skype: skype:yourname?call|chat || skype
 
 social:
-        # FB Page: https://www.facebook.com/jame.leaf.94
-        # Witter: https://twitter.com/Leafjame || twitter
-  E-Mail: mailto:kekemao00@gmail.com || envelope
-  GitHub: https://github.com/kekemao00 || github
-  # YouTube: https://youtube.com/channel/UCtzIJK9eLCWLQF13KpZE-0w  || youtube
-  # Jianshu: https://www.jianshu.com/u/3b74c7b81348 || instagram
+  GitHub: https://github.com/leafjame || github
+  E-Mail: mailto:leaf793458585@gmail.com || envelope
+  Facebook: https://www.facebook.com/jame.leaf.94 || facebook
+  Witter: https://twitter.com/Leafjame || twitter
+  YouTube: https://youtube.com/channel/UCtzIJK9eLCWLQF13KpZE-0w  || youtube
+  Jianshu: https://www.jianshu.com/u/3b74c7b81348 || instagram
 
 social_icons:
-  enable: false
-  icons_only: false
+  enable: true
+  icons_only: true
   transition: false
 
 # Blog rolls
@@ -164,21 +177,21 @@ links:
   #daovoice: http://www.daovoice.io/
 
 mylinks:
-- nickname: Leaf's Blog  #友链名称
-  avatar: https://leafjame.github.io/images/avatar.gif  #友链头像
+- nickname: 北宸的博客  #友链名称
+  avatar: https://leafjame.github.io/images/beichen.png  #友链头像
   site: https://leafjame.github.io  #友链地址
-  info: Java狮 北漂男 摄影 旅行 赚钱  #友链说明
-- nickname: MaoKe's Blog
-  avatar: https://kekemao.me/images/favicon-32x32-next.png
-  site: https://kekemao.me
-  info: android developer
+  info: 因心造境，风云由我！  #友链说明
+- nickname: 北宸的博客
+  avatar: https://leafjame.github.io/images/beichen.png
+  site: https://leafjame.github.io
+  info: 因心造境，风云由我！
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
 #avatar: /images/avatar.gif
 
-avatar: /images/kekemao.jpeg
+avatar: /images/beichen.png
 
 # Table Of Contents in the Sidebar
 toc:
@@ -232,7 +245,7 @@ sidebar:
 scroll_to_more: false
 
 # Automatically saving scroll position on each post/page in cookies.
-save_scroll: true
+save_scroll: false
 
 # Automatically excerpt description in homepage as preamble text.
 excerpt_description: true
@@ -245,7 +258,7 @@ auto_excerpt:
 
 # Post meta display settings
 post_meta:
-  item_text: true
+  item_text: false #隐藏文章标题下方'发表于'..文字
   created_at: true
   updated_at: false
   categories: true
@@ -253,11 +266,11 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
-  item_text: true
+  item_text: false
   wordcount: true
-  min2read: true
-  totalcount: false
-  separated_meta: true
+  min2read: false
+  totalcount: true
+  separated_meta: false
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -267,17 +280,17 @@ post_wordcount:
 
 # Reward
 #reward_comment: Donate comment here
-#wechatpay: /images/wechatpay.jpeg
-#alipay: /images/alipay.png
+#wechatpay: /images/wechatpay.jpg
+#alipay: /images/alipay.jpg
 #bitcoin: /images/bitcoin.png
 
-reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
-wechatpay: /images/wechatpay.jpeg
-alipay: /images/alipay.png
+reward_comment: 坚持原创技术分享，感谢您的支持和鼓励！
+wechatpay: /images/wechatpay.jpg
+alipay: /images/alipay.jpg
 
 # Declare license on posts
 post_copyright:
-  enable: true
+  enable: false
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -287,7 +300,7 @@ post_copyright:
 # ---------------------------------------------------------------
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: false #开启会影起文章边框消失
 
 # Android Chrome header panel color ($black-deep).
 android_chrome_color: "#222"
@@ -383,7 +396,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID 百度统计
-baidu_analytics:
+baidu_analytics: 
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -408,12 +421,12 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
-  enable: true
-  appid:  LTH0ylU1dpzdyXSNtfftVbbl-MdYXbMMI
-  appkey: 8M1O1nn75RPr97jsCmyQ3lMu
-  notify: true # mail notifier , https://github.com/xCss/Valine/wiki
-  verify: false # Verification code
-  placeholder: '来都来了，不说点什么嘛~🤒'  # comment box placeholder
+  enable: false
+  appid: XXXXXXXX # your leancloud application appid
+  appkey: XXXXXXXX # your leancloud application appkey
+  notify: false # mail notifier: https://valine.js.org/notify.html # 20190903使用Valine-Admin：参考 https://deserts.io/valine-admin-document/
+  verify: false # Verification code //使用Valine-Admin
+  placeholder: '&#x270d;&nbsp;写评论'  # comment box placeholder
   avatar: mm # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
@@ -426,9 +439,6 @@ valine:
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 #livere_uid: your uid
-
-# 来必力评论 https://www.livere.com/insight/communite
-livere_uid: #
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
@@ -447,14 +457,6 @@ gitment:
   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
   redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled
 
-gitalk:
-  enable: false
-  githubID:
-  repo:
-  ClientID:
-  ClientSecret:
-  adminUser:
-  distractionFreeMode: true
 
 # Baidu Share
 # Available value:
@@ -464,7 +466,7 @@ gitalk:
 ##  type: button
 
 #baidushare:
-  #type: slide  # 设置分享按钮的风格，有button何slide形式
+#  type:  # 设置分享按钮的风格，有button何slide形式
 
 # Share
 # This plugin is more useful in China, make sure you known how to use it.
@@ -489,32 +491,40 @@ gitalk:
 #           Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,
 #           Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
 needmoreshare2:
-  enable: true
+  enable: false
   postbottom:
     enable: true
     options:
       iconStyle: box
       boxForm: horizontal
       position: bottomCenter
-      networks: Wechat,Douban,QQZone,Twitter,Facebook
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
   float:
     enable: false
     options:
       iconStyle: box
       boxForm: horizontal
       position: middleRight
-      networks: Wechat,Douban,QQZone,Twitter,Facebook
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
 
+#  站点验证
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-#google_site_verification:
+google_site_verification: 
 
 # Google Analytics
-#google_analytics:
+google_analytics: 
+
+# https://liaofuzhan.netlify.com 站点验证
+baidu_site_verification: 
+
+qihu_site_verification: 
+
+sogou_site_verification: 
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
-#bing_site_verification:
+bing_site_verification: 
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
@@ -531,7 +541,7 @@ needmoreshare2:
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
-  ua_enable: false
+  ua_enable: true
   admin_enable: false
   user_id: 0
   #admin_nickname: Author
@@ -562,7 +572,7 @@ vkontakte_api:
   enable:       false
   app_id:       #<app_id>
   like:         true
-  comments:     false
+  comments:     true
   num_of_posts: 10
 
 # 文章评分功能
@@ -570,35 +580,32 @@ vkontakte_api:
 # To get your ID visit https://widgetpack.com
 rating:
   enable: false
-#  id:     #<app_id>
-  id:
-  color:
+  id:     #<app_id>
+  color: 
 # ---------------------------------------------------------------
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
+# 安全问题：https://leaferx.online/2018/02/11/lc-security/
 leancloud_visitors:
-  enable: true
-  app_id:  LTH0ylU1dpzdyXSNtfftVbbl-MdYXbMMI
-  app_key: 8M1O1nn75RPr97jsCmyQ3lMu
+  enable: false
+  app_id: XXXXXXXX #<app_id>
+  app_key: XXXXXXXX #<app_key>
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
-  security: true
-  # 由于Leancloud免费版的云引擎存在请求线程数和运行时间限制以及休眠机制，
-  # 很多时候访客数量加载会很慢。
-  # 如果设置betterPerformance为true，
-  # 则网页则会在提交请求之前直接显示访客人数为查询到的人数+1，以增加用户体验。
+  # If you don't care about security in leancloud counter and just want to use it directly
+  # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
+  security: false
   betterPerformance: true
-
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
 # visit https://firebase.google.com/docs/firestore/ to get more information about firestore
 firestore:
-  enable: true
-  collection: articles #required, a string collection name to access firestore database
-  apiKey: AIzaSyAYCK3u2XY23LlAsXPNo-iJXXf0JA2Gt70 #required
-  projectId: myblog-hexo #required
-  bluebird: true #enable this if you want to include bluebird 3.5.1(core version) Promise polyfill
+  enable: false
+  collection: XXXXXXXX #required, a string collection name to access firestore database
+  apiKey: XXXXXXXX #required
+  projectId: XXXXXXXX #required
+  bluebird: false #enable this if you want to include bluebird 3.5.1(core version) Promise polyfill
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
@@ -607,14 +614,16 @@ busuanzi_count:
   enable: true
   # custom uv span for the whole site
   site_uv: true
-  site_uv_header: <i class="fa fa-user"></i>访问人数
-  site_uv_footer: 人次
+#  site_uv_header: <i class="fa fa-user"></i> 访客
+  site_uv_header: <i class="fa fa-user"></i>
+  site_uv_footer:
   # custom pv span for the whole site
   site_pv: true
-  site_pv_header: <i class="fa fa-eye"></i>总访问量
-  site_pv_footer: 次
+#  site_pv_header: <i class="fa fa-eye"></i> 访问量
+  site_pv_header: <i class="fa fa-eye"></i>
+  site_pv_footer:
   # custom pv span for one page only
-  page_pv: true #使用firestore统计pv及排行
+  page_pv: false #使用leancloud(firestore)统计pv及排行
   page_pv_header: <i class="fa fa-file-o"></i> 浏览
   page_pv_footer: 次
 
@@ -710,7 +719,7 @@ tabs:
 # Use velocity to animate everything.
 motion:
   enable: true
-  async: false
+  async: true
   transition:
     # Transition variants:
     # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut
@@ -719,12 +728,12 @@ motion:
     # slideUpIn | slideUpOut | slideDownIn | slideDownOut | slideLeftIn | slideLeftOut | slideRightIn | slideRightOut
     # slideUpBigIn | slideUpBigOut | slideDownBigIn | slideDownBigOut | slideLeftBigIn | slideLeftBigOut | slideRightBigIn | slideRightBigOut
     # perspectiveUpIn | perspectiveUpOut | perspectiveDownIn | perspectiveDownOut | perspectiveLeftIn | perspectiveLeftOut | perspectiveRightIn | perspectiveRightOut
-    post_block: fadeIn
-    post_header: slideDownIn
-    post_body: slideDownIn
-    coll_header: slideLeftIn
+    post_block: flipYIn
+    post_header: perspectiveRightIn
+    post_body: perspectiveLeftIn
+    coll_header: swoopIn
     # Only for Pisces | Gemini.
-    sidebar: slideUpIn
+    sidebar: shrinkIn
 
 # Fancybox
 fancybox: true
@@ -770,8 +779,8 @@ canvas_sphere: false
 # 条状背景线，点击动态变化
 canvas_ribbon:
   enable: true
-  size: 300
-  alpha: 0.6
+  size: 60
+  alpha: 0.1
   zIndex: -1
 
 # 设置CDN加速：http://yearito.cn/posts/hexo-deploy-to-VPS.html
@@ -790,8 +799,11 @@ vendors:
 
   # Internal version: 2.1.5
   # See: http://fancyapps.com/fancybox/
-  fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js
-  fancybox_css: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css
+#  图片左右切换按钮
+#  fancybox: #https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js
+#  fancybox_css: #https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css
+  fancybox:
+  fancybox_css:
 
   # Internal version: 1.0.6
   # See: https://github.com/ftlabs/fastclick
@@ -882,7 +894,7 @@ passage_end_tag:
 cursor_effect:
   enabled: true
   # fireworks：礼花 | explosion：爆炸 | love：浮出爱心 | text：浮出文字
-  type: fireworks
+  type: explosion
 
 # typing effect 打字特效
 typing_effect:
@@ -890,19 +902,71 @@ typing_effect:
   colorful: true  # 礼花特效
   shake: false  # 震动特效
 
+# 标签页样式 /tags/
+# type: | tagcanvas | color | love | bubble |
+# PS：tagcanvas依赖hexo-tag-cloud插件
+tagcloud:
+  type: bubble # 为空则使用默认标签页
+
+# 分类页样式
+# type: | love | bubble |
+category_style:
+  type: love # 为空则使用默认标签页
+
+# 侧栏自定义时间
+diy_time:
+  runtime:
+    enable: false #运行时间
+    birthday: "08/07/2019 20:00:00"
+  clock:
+    enable: true # 粒子时钟
+
 # 看板娘
 live2d:
-  enabled: true
+  enable: true
+
+# aplayer音乐播放器
+aplayer:
+  enable: false
+
+# https://player.lmih.cn/
+haoyuePlayer:
+  enable: true
+  key: 158711254641
+
+# 网站右下角旋转魔方
+cube:
+  enable: true
+  type: mini # mini | hollow
+
+# Console 输出第三方个性化字体
+fig_font:
+  enable: true
+  font: Big Money-ne
+  input_text: Welcome To Leaface
+
+# Console 输出自定义字体
+diy_font:
+  enable: true
+  input_text: Welcome To Leaface
+
+# 谷歌广告
+google_ads:
+  enable: false
+  auto_ads: true # next/layout/_layout.swig、 _partials/head.swig、文章内部
+  comments_ads: true # next/layout/_partials/comments.swig
+  sidebar_ads: false # next/layout/_macro/sidebar.swig
+  post_ads: false # next/layout/_macro/post.swig
 
 # Online contact
 daovoice: false
-daovoice_app_id:
+daovoice_app_id: XXXXXXXX
 
 # Tidio online chat
 # see: https://www.tidiochat.com
 tidio:
   enable: false
-  key: # Public_Key
+  key: XXXXXXXX # Public_Key
 
 pdf:
   enable: true
@@ -913,9 +977,56 @@ pdf:
 # see: https://www.hotjar.com/
 hotjar:
   enable: false
-  siteID: # site ID
+  siteID: XXXXXXXX # site ID
 
 # 近期文章
 recent_posts_title: 近期文章
 recent_posts_layout: block
 recent_posts: true
+
+#  https://github.com/overtrue/share.js
+share_js: true
+
+# 网站底部订阅按钮
+web_subscribe:
+  enable: true
+
+# Dependencies: https://github.com/tea3/hexo-related-popular-posts
+related_posts:
+  enable: true
+  title: 相关文章
+  icon: graduation-cap
+  display_in_home: false
+  params:
+    maxCount: 10
+    #PPMixingRate: 0.0
+    #isDate: false
+    #isImage: false
+    #isExcerpt: false
+
+# 主页轮播图 使用 620x310 的图片
+#Home carousel map, from means link, img means picture
+carousel:
+  enable: true
+  item: [
+    {
+      'link': 'https://leaface.netlify.com',
+      'img': 'https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/knowledge.png'
+    },
+    {
+      'link': 'https://www.liaofuzhan.com/posts/507826828.html',
+      'img': 'https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/mobile.png'
+    },
+    {
+      'link': 'https://mailchi.mp/e92415d27722/leaf',
+      'img': 'https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/subscribe.png'
+    },
+    {
+      'link': 'https://github.com/leafjame/hexo-theme-next5-leaf',
+      'img': 'https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/share.png'
+    },
+    {
+      'link': 'https://www.liaofuzhan.com/photos/',
+      'img': 'https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/photos.png'
+    }
+  ]
